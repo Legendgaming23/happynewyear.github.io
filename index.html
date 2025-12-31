@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy New Year Baby! 💕</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Comic Sans MS', cursive, sans-serif;
+            overflow-x: hidden;
+        }
+
+        .page {
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            position: relative;
+        }
+
+        /* Page 1 Styles */
+        #page1 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+
+        .main-title {
+            font-size: 4em;
+            color: #fff;
+            text-align: center;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.3);
+            margin-bottom: 30px;
+            animation: fadeInScale 1s ease-out;
+        }
+
+        /* Page 2 Styles */
+        #page2 {
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            display: none;
+        }
+
+        .letter-container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            position: relative;
+            animation: fadeInScale 1s ease-out;
+        }
+
+        .letter-text {
+            font-size: 1.3em;
+            line-height: 1.8;
+            color: #333;
+            text-align: center;
+        }
+
+        /* Page 3 Styles */
+        #page3 {
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            display: none;
+        }
+
+        .wishes-container {
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            max-width: 600px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            animation: fadeInScale 1s ease-out;
+        }
+
+        .wishes-title {
+            font-size: 2em;
+            color: #f5576c;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .wishes-list {
+            font-size: 1.2em;
+            color: #333;
+            line-height: 2;
+            text-align: left;
+        }
+
+
+
+        /* Button Styles */
+        .cute-button {
+            background: linear-gradient(135deg, #ff6b9d 0%, #c86dd7 100%);
+            color: white;
+            border: none;
+            padding: 15px 40px;
+            font-size: 1.3em;
+            border-radius: 50px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+            transition: all 0.3s ease;
+            margin-top: 30px;
+            font-family: 'Comic Sans MS', cursive;
+        }
+
+        .cute-button:hover {
+            transform: scale(1.1);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.4);
+        }
+
+        /* Floating Hearts */
+        .heart {
+            position: absolute;
+            font-size: 2em;
+            color: #ff6b9d;
+            animation: float 4s ease-in-out infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0) rotate(0deg);
+            }
+            50% {
+                transform: translateY(-20px) rotate(10deg);
+            }
+        }
+
+        @keyframes fadeInScale {
+            from {
+                opacity: 0;
+                transform: scale(0.8);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+
+
+        @media (max-width: 768px) {
+            .main-title {
+                font-size: 2.5em;
+            }
+            .letter-container, .wishes-container {
+                padding: 30px 20px;
+            }
+            .photo-frame img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Page 1: Main Title -->
+    <div class="page" id="page1">
+        <h1 class="main-title">Happy New Year Baby!! 💕</h1>
+        <button class="cute-button" onclick="goToPage(2)">Click me! 💖</button>
+        <div class="heart" style="top: 10%; left: 10%; animation-delay: 0s;">❤️</div>
+        <div class="heart" style="top: 20%; right: 15%; animation-delay: 1s;">💕</div>
+        <div class="heart" style="bottom: 15%; left: 20%; animation-delay: 2s;">💖</div>
+        <div class="heart" style="bottom: 25%; right: 10%; animation-delay: 1.5s;">💗</div>
+        <div class="heart" style="top: 50%; left: 5%; animation-delay: 0.5s;">❤️</div>
+        <div class="heart" style="top: 60%; right: 5%; animation-delay: 2.5s;">💕</div>
+    </div>
+
+    <!-- Page 2: Love Letter -->
+    <div class="page" id="page2">
+        <div class="letter-container">
+            <div class="letter-text">
+                💕 My Dearest Love 💕<br><br>
+                As we step into this brand new year together, I want you to know that you are the most precious gift in my life. Your smile brightens my darkest days, and your laughter is my favorite melody. Every moment with you is a treasure I hold close to my heart.<br><br>
+                Thank you for being my everything - my best friend, my partner, and my greatest love. Here's to creating more beautiful memories together in 2026!<br><br>
+                Forever yours, with all my heart 💖
+            </div>
+            <button class="cute-button" onclick="goToPage(3)">See my wishes for you! 🌟</button>
+        </div>
+        <div class="heart" style="top: 5%; left: 8%; animation-delay: 0s;">❤️</div>
+        <div class="heart" style="top: 15%; right: 12%; animation-delay: 1s;">💕</div>
+        <div class="heart" style="bottom: 10%; left: 15%; animation-delay: 2s;">💖</div>
+        <div class="heart" style="bottom: 20%; right: 8%; animation-delay: 1.5s;">💗</div>
+    </div>
+
+    <!-- Page 3: 2026 Wishes -->
+    <div class="page" id="page3">
+        <div class="wishes-container">
+            <h2 class="wishes-title">For 2026 I wish you:</h2>
+            <div class="wishes-list">
+                • main-character energy<br>
+                • unlimited cuteness (even tho u already have it)<br>
+                • good sleep fr<br>
+                • peace 🤍<br>
+                • and some romantic kuchupuchu with me 😙
+            </div>
+
+        </div>
+        <div class="heart" style="top: 8%; left: 10%; animation-delay: 0s;">❤️</div>
+        <div class="heart" style="top: 18%; right: 10%; animation-delay: 1s;">💕</div>
+        <div class="heart" style="bottom: 12%; left: 12%; animation-delay: 2s;">💖</div>
+        <div class="heart" style="bottom: 22%; right: 12%; animation-delay: 1.5s;">💗</div>
+    </div>
+
+
+
+    <script>
+        function goToPage(pageNumber) {
+            // Hide all pages
+            document.querySelectorAll('.page').forEach(page => {
+                page.style.display = 'none';
+            });
+            
+            // Show the selected page
+            document.getElementById('page' + pageNumber).style.display = 'flex';
+        }
+    </script>
+</body>
+</html>
